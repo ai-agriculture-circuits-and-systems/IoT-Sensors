@@ -1,5 +1,5 @@
-# reference-of-IoT-multimodal-sensors
-This document provides a comprehensive reference for sensors used in this work, including their key specifications and datasheet links.
+# IoT-Sensors
+This document provides a comprehensive reference for sensors, including their key specifications and datasheet links.
 
 ---
 
