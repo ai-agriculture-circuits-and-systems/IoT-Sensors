@@ -36,7 +36,9 @@ This document provides a comprehensive reference for sensors, including their ke
 | BPW34 | Light | 10-100 MΩ | 0-100 µA | 1-10 nA (暗电流) | **0.001-0.01%** | **~90** | [Vishay Datasheet](https://www.vishay.com/en/product/81566/) |
 | Alpha Sense CO-A4 | Gas | 1-100 MΩ | ±100 µA (200 µA) | ±0.1 µA (基线漂移) | **±0.05%** | **~85** | [Alphasense Datasheet](https://www.alphasense.com/product/co-a4/) |
 | GUVA-S12SD | UV | > 1 GΩ | 0-100 nA | 0.1-1 nA (暗电流) | **0.1-1%** | **~70** | [Genicom Datasheet](https://www.genicom.com/product/guva-s12sd/) |
-
+| **SGM446** | Temperature | 高阻抗 (>10 MΩ) | 218.2 µA @ -55°C 至 423.2 µA @ +150°C (205 µA动态) | ±2°C (校准误差) | **±0.98%** | **~45-50** | [SGMICRO](https://www.sg-micro.com/product-detail/SGM446) |
+| **AD592CN** | Temperature | 高阻抗 (>10 MΩ) | 248.2 µA @ -25°C 至 378.2 µA @ +105°C (130 µA动态) | ±0.5°C @ 25°C，±1°C 全范围 | **±0.77%** | **~48-52** | [Omega](https://www.omega.com/en-us/sensors-and-sensing-equipment/temperature-sensors/thermistors-and-rtds/ad592/p/AD592CN) |
+| **LMT01** | Temperature | 数字脉冲输出 | 脉冲频率与温度成正比 | ±0.5°C (-20°C 至 90°C) | **±0.5%** | **~55-60** | [Texas Instruments](https://www.ti.com/product/LMT01) |
 ---
 
 ## Resistive Output Sensors (NTC Thermistors)
@@ -91,29 +93,42 @@ This document provides a comprehensive reference for sensors, including their ke
 
 ---
 
+## Summary
+
+| Category | Sensors |
+|----------|--------|
+| **Voltage Output** | LEICI 214-01, TSC1021, Zemic L6D, MPM160, GZP193-201GF01, LM35, TMP36, LM335, Honeywell HIH-5031-001, Shinyei RHI Series, Veris HW2XA2A, E+E HTP201, EE06 Series, Silicon Labs Si7007 |
+| **Current Output** | BH1620FVC-TR, APDS-9005, VEMD5525FX02, BPW34, Alpha Sense CO-A4, GUVA-S12SD, **SGM446**, **AD592CN**, **LMT01** |
+| **Resistive Output** | MF58-105-4250, NTCS0805E3684HXT, 105NT-4-R025H46G, GP105V8J, NTCG104QH105HT1, MF58-504-4050, EPCOS B57301V2472J60 |
+| **Capacitive Output** | MEMS麦克风读出接口, SAR ADC电容参考校准, 电容式位移传感器(精密型), ΔΣ调制器电容接口, CMOS SC电容接口, IST AG K5, IST AG P14 FemtoCap-G, ROTRONIC HygroMer WA-1, Michell H8000, 通用电容式压力传感器, NXP PCF8883, Azoteq IQS680, TI FDC1004, IEEE 2007 电容式压力传感器, Sensirion 通用电容式湿度传感器, 双模式电容传感器接口 |
+
+---
+
 ## Statistical Summary by Category
 
-### Voltage Output Sensors (17 sensors)
+### Voltage Output Sensors (14 sensors)
 
 | Metric | Output Impedance (Ω) | Dynamic Range (mV) | Baseline Variable (%) | SNDR (dB) |
 |--------|---------------------|-------------------|----------------------|-----------|
 | **Minimum** | 0.1 | 828 | 0.1% | 26 |
-| **Maximum** | 10,000 | 10,000 | 30% | 85 |
-| **Average** | ~2,800 | ~3,500 | ~4.5% | ~60 |
-| **Median** | 5 | ~3,000 | ~2.8% | ~65 |
+| **Maximum** | 10,000 | 10,000 | 30% | 80 |
+| **Average** | ~2,500 | ~3,200 | ~4.2% | ~55 |
+| **Median** | 5 | ~3,000 | ~2.5% | ~58 |
 
 *Note: Values exclude PWM output sensors for Dynamic Range calculation.*
 
 ---
 
-### Current Output Sensors (6 sensors)
+### Current Output Sensors (9 sensors)
 
 | Metric | Output Impedance (Ω) | Dynamic Range (µA) | Baseline Variable (%) | SNDR (dB) |
 |--------|---------------------|-------------------|----------------------|-----------|
-| **Minimum** | 1,000,000 | 50 | 0.001% | 70 |
-| **Maximum** | 1,000,000,000 | 200 | 1% | 90 |
-| **Average** | ~334,000,000 | ~108 | ~0.2% | ~86 |
-| **Median** | ~50,000,000 | ~100 | ~0.03% | ~90 |
+| **Minimum** | 1,000,000 | 50 | 0.001% | 45 |
+| **Maximum** | 1,000,000,000 | 205 | 1% | 90 |
+| **Average** | ~222,000,000 | ~130 | ~0.35% | ~73 |
+| **Median** | ~10,000,000 | ~130 | ~0.05% | ~70 |
+
+*Note: SGM446 and AD592CN are current-output temperature sensors with lower SNDR (45-52 dB), expanding the current output SNDR range downward.*
 
 ---
 
@@ -128,16 +143,16 @@ This document provides a comprehensive reference for sensors, including their ke
 
 ---
 
-### Capacitive Output Sensors (10 sensors)
+### Capacitive Output Sensors (19 sensors)
 
 | Metric | Capacitance Range (pF) | Dynamic Range (pF) | Baseline Variable (%) | SNDR (dB) |
 |--------|-----------------------|-------------------|----------------------|-----------|
-| **Minimum** | 30 | 30 | 5% | 25 |
-| **Maximum** | 287.5 | 270 | 333% | 55 |
-| **Average** | ~180 | ~140 | ~45% | ~38 |
-| **Median** | ~190 | ~115 | ~15% | ~38 |
+| **Minimum** | 0.1 | 30 | 0.1% | 25 |
+| **Maximum** | 287.5 | 270 | 333% | 96.6 |
+| **Average** | ~85 | ~100 | ~28% | ~48 |
+| **Median** | ~30 | ~50 | ~10% | ~45 |
 
-*Note: TI FDC1004's 333% baseline variable is due to offset compensation capability.*
+*Note: TI FDC1004's 333% baseline variable is due to offset compensation capability. ΔΣ modulator interface achieves 96.6 dB SNDR, significantly higher than typical capacitive sensors.*
 
 ---
 
@@ -146,10 +161,25 @@ This document provides a comprehensive reference for sensors, including their ke
 | Metric | Output Impedance | Dynamic Range | Baseline Variable (%) | SNDR (dB) |
 |--------|-----------------|---------------|----------------------|-----------|
 | **Minimum** | 0.1 Ω | 20 µV/V (Zemic) | 0.001% | 25 |
-| **Maximum** | 1 GΩ | 10,000 mV | 333% | 90 |
-| **Overall Average** | ~85 MΩ | Varies by type | ~13% | ~55 |
-| **Highest SNDR** | 90 dB (Current Output - Light Sensors) |
-| **Lowest SNDR** | 25 dB (Capacitive Output - Humidity Sensors) |
+| **Maximum** | 1 GΩ | 10,000 mV | 333% | 96.6 |
+| **Overall Average** | ~55 MΩ | Varies by type | ~11% | ~52 |
+| **Highest SNDR** | 96.6 dB (ΔΣ Modulator Capacitive Interface) |
+| **Lowest SNDR** | 25 dB (Capacitive Humidity Sensors) |
+
+---
+
+## SNDR Distribution by Category
+
+| SNDR Range (dB) | Voltage Output | Current Output | Resistive Output | Capacitive Output |
+|-----------------|---------------|---------------|------------------|-------------------|
+| **0-30** | 1 | 0 | 1 | 4 |
+| **30-40** | 2 | 0 | 6 | 4 |
+| **40-50** | 1 | **2** (SGM446, AD592CN) | 0 | 4 |
+| **50-60** | 3 | **1** (LMT01) | 0 | 3 |
+| **60-70** | 3 | 0 | 0 | **2** |
+| **70-80** | 3 | 1 | 0 | 0 |
+| **80-90** | 1 | 4 | 0 | 0 |
+| **90-100** | 0 | 1 | 0 | **2** |
 
 ---
 
@@ -157,10 +187,48 @@ This document provides a comprehensive reference for sensors, including their ke
 
 | Category | Lowest Baseline Variable | Highest Baseline Variable | SNDR Range |
 |----------|-------------------------|--------------------------|------------|
-| **Voltage Output** | 0.1% (TSC1021, Zemic L6D) | 30% (E+E HTP201) | 26-85 dB |
-| **Current Output** | 0.001% (Photodiodes) | 1% (GUVA-S12SD) | 70-90 dB |
+| **Voltage Output** | 0.1% (TSC1021, Zemic L6D) | 30% (E+E HTP201) | 26-80 dB |
+| **Current Output** | 0.001% (Photodiodes) | 1% (GUVA-S12SD) | **45-90 dB** |
 | **Resistive Output** | 0.3% (EPCOS B57301) | 3.6% (GP105V8J) | 27-38 dB |
-| **Capacitive Output** | 5% (Azoteq IQS680) | 333% (TI FDC1004) | 25-55 dB |
+| **Capacitive Output** | 0.1% (SAR ADC电容参考) | 333% (TI FDC1004) | **25-96.6 dB** |
+
+---
+
+## SNDR Ranking (Sensor Only, Lowest to Highest)
+
+| Rank | Sensor | Category | SNDR (dB) |
+|------|--------|----------|-----------|
+| 1 | IST AG K5 / P14 | Capacitive | 25-35 |
+| 2 | Silicon Labs Si7007 | Voltage | 26-30 |
+| 3 | NTCS0805E3684HXT | Resistive | ~27 |
+| 4 | EE06 Series | Voltage | 30-35 |
+| 5 | ROTRONIC HygroMer WA-1 | Capacitive | 30-40 |
+| 6 | GP105V8J, MF58-504-4050 | Resistive | ~31 |
+| 7 | MF58-105-4250, 105NT-4-R025H46G | Resistive | ~32 |
+| 8 | Veris HW2XA2A, E+E HTP201 | Voltage | 32-38 |
+| 9 | NTCG104QH105HT1 | Resistive | ~36 |
+| 10 | EPCOS B57301V2472J60 | Resistive | ~38 |
+| 11 | Michell H8000, IEEE 2007 | Capacitive | 35-45 |
+| 12 | NXP PCF8883 | Capacitive | 40-50 |
+| **13** | **SGM446** | **Current** | **45-50** |
+| 14 | TI FDC1004 | Capacitive | 45-55 |
+| 15 | TMP36 | Voltage | ~50 |
+| 16 | Azoteq IQS680 | Capacitive | 50-55 |
+| **17** | **AD592CN** | **Current** | **48-52** |
+| 18 | LM35 | Voltage | ~52 |
+| 19 | LM335 | Voltage | 55-65 |
+| 20 | Shinyei RHI Series | Voltage | 55-65 |
+| **21** | **LMT01** | **Current** | **55-60** |
+| 22 | Honeywell HIH-5031-001 | Voltage | 58-62 |
+| 23 | SAR ADC电容参考校准 | Capacitive | 60.4 |
+| 24 | MEMS麦克风读出接口 | Capacitive | 65.4 |
+| 25 | GUVA-S12SD | Current | ~70 |
+| 26 | Zemic L6D | Voltage | ~75 |
+| 27 | LEICI 214-01, MPM160, GZP193 | Voltage | ~80 |
+| 28 | Alpha Sense CO-A4 | Current | ~85 |
+| 29 | TSC1021 | Voltage | ~85 |
+| 30 | BH1620FVC-TR, APDS-9005, VEMD5525FX02, BPW34 | Current | ~90 |
+| 31 | ΔΣ调制器电容接口 | Capacitive | 96.6 |
 
 ---
 
@@ -170,8 +238,10 @@ This document provides a comprehensive reference for sensors, including their ke
 - **Access Dates**: All links accessed March 30, 2026
 - **MF58 Series**: Manufactured by multiple suppliers including Nanjing Shiheng, Cantherm, and Xingxiang Electronics
 - **NTC Series**: Various manufacturers including Vishay, SEMITEC, Littelfuse, TDK, and EPCOS
-- **Capacitive Sensors**: Includes humidity, pressure, and proximity/touch sensing applications
+- **Capacitive Sensors**: Includes humidity, pressure, proximity/touch, displacement, acoustic, and interface circuits
+- **Current Output Sensors**: Added SGM446, AD592CN (analog current-output temperature sensors) and LMT01 (digital pulse-output temperature sensor)
 - **\* Output Buffer**: Indicates sensors requiring an output buffer for proper signal conditioning
 - **SNDR (Sensor Only)**: Estimated based on sensor's inherent dynamic range, noise characteristics, and linearity. Does not include external signal conditioning or ADC contributions.
 - **Baseline Variable (%)**: Calculated as (Baseline Variable Range / Full Scale Dynamic Range) × 100%. For TI FDC1004, the high percentage (333%) is due to its offset compensation feature, which allows cancellation of large parasitic capacitance while measuring small signal changes.
 - **Statistical Averages**: Calculated using nominal values; ranges are represented by midpoints for averaging purposes.
+- **New Additions**: Added 3 current-output temperature sensors (SGM446, AD592CN, LMT01) with SNDR ranging from 45-60 dB, filling the lower SNDR range in current output category.
