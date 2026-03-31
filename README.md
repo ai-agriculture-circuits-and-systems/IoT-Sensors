@@ -149,7 +149,7 @@ This document provides a comprehensive reference for sensors, including their ke
 |--------|-----------------------|-------------------|----------------------|-----------|
 | **Minimum** | 0.1 | 30 | 0.1% | 25 |
 | **Maximum** | 287.5 | 270 | 333% | 96.6 |
-| **Average** | ~85 | ~100 | ~28% | ~48 |
+| **Average** | ~85 | ~100 | ~28% | ~55 |
 | **Median** | ~30 | ~50 | ~10% | ~45 |
 
 *Note: TI FDC1004's 333% baseline variable is due to offset compensation capability. ΔΣ modulator interface achieves 96.6 dB SNDR, significantly higher than typical capacitive sensors.*
