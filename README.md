@@ -199,15 +199,15 @@ This document provides a comprehensive reference for sensors, including their ke
 | 10 | EPCOS B57301V2472J60 | Resistive | ~38 |
 | 11 | Michell H8000, IEEE 2007 | Capacitive | 35-45 |
 | 12 | NXP PCF8883 | Capacitive | 40-50 |
-| 13 | **SGM446** | **Current** | **45-50** |
+| 13 | SGM446 | Current | 45-50 |
 | 14 | TI FDC1004 | Capacitive | 45-55 |
 | 15 | TMP36 | Voltage | ~50 |
 | 16 | Azoteq IQS680 | Capacitive | 50-55 |
-| 17 | **AD592CN** | **Current** | **48-52** |
+| 17 | AD592CN | Current | 48-52 |
 | 18 | LM35 | Voltage | ~52 |
 | 19 | LM335 | Voltage | 55-65 |
 | 20 | Shinyei RHI Series | Voltage | 55-65 |
-| 21 | **LMT01** | **Current** | **55-60** |
+| 21 | LMT01 | Current | 55-60 |
 | 22 | Honeywell HIH-5031-001 | Voltage | 58-62 |
 | 23 | SAR ADC Capacitor Reference | Capacitive | 60.4 |
 | 24 | MEMS Microphone Interface | Capacitive | 65.4 |
