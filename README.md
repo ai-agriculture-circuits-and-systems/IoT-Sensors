@@ -30,7 +30,7 @@ This document provides a comprehensive reference for sensors, including their ke
 
 | Sensor | Application | Output Impedance | Dynamic Range | Baseline Variable Range | Baseline Variable (%) | SNDR (Sensor Only, dB) | Datasheet Link |
 |--------|-------------|------------------|---------------|------------------------|----------------------|------------------------|----------------|
-| BH1620FVC-TR (Used in this work) | Light | > 1 MΩ | 0-100 µA | 1-10 nA (dark current) | **0.001-0.01%** | **~90** | [ROHM Datasheet](https://www.rohm.com/products/sensors-mems/ambient-light-sensor-ics/analog-current-output/bh1620fvc-product) |
+| BH1620FVC-TR | Light | > 1 MΩ | 0-100 µA | 1-10 nA (dark current) | **0.001-0.01%** | **~90** | [ROHM Datasheet](https://www.rohm.com/products/sensors-mems/ambient-light-sensor-ics/analog-current-output/bh1620fvc-product) |
 | APDS-9005 | Light | > 1 MΩ | 0-100 µA | 1-10 nA (dark current) | **0.001-0.01%** | **~90** | [Broadcom Datasheet](https://www.broadcom.com/products/optical-sensors/ambient-light-sensors/apds-9005) |
 | VEMD5525FX02 | Light | > 10 MΩ | 0-50 µA | 0.5-5 nA (dark current) | **0.001-0.01%** | **~90** | [Vishay Datasheet](https://www.vishay.com/en/product/80560/) |
 | BPW34 | Light | 10-100 MΩ | 0-100 µA | 1-10 nA (dark current) | **0.001-0.01%** | **~90** | [Vishay Datasheet](https://www.vishay.com/en/product/81566/) |
@@ -46,7 +46,7 @@ This document provides a comprehensive reference for sensors, including their ke
 
 | Type | Application | Resistance@0°C | Resistance@25°C | Resistance@85°C | Dynamic Range | Baseline Variable Range | Baseline Variable (%) | SNDR (Sensor Only, dB) | Datasheet Link |
 |------|-------------|----------------|-----------------|-----------------|---------------|------------------------|----------------------|------------------------|----------------|
-| MF58-105-4250 (Used in this work) | NTC | 3,700 kΩ | 1,000 kΩ | 91 kΩ | 3,609 kΩ | ±10% R25 (100 kΩ) | **±2.8%** | **~32** | [MF58 Series Datasheet](https://www.lcsc.com/product-detail/NTC-Thermistors_Nanjing-Shiheng-Elec-MF58-104F3950_C123399.html) |
+| MF58-105-4250 | NTC | 3,700 kΩ | 1,000 kΩ | 91 kΩ | 3,609 kΩ | ±10% R25 (100 kΩ) | **±2.8%** | **~32** | [MF58 Series Datasheet](https://www.lcsc.com/product-detail/NTC-Thermistors_Nanjing-Shiheng-Elec-MF58-104F3950_C123399.html) |
 | NTCS0805E3684HXT | NTC | 1,680 kΩ | 680 kΩ | 72 kΩ | 1,608 kΩ | ±5% R25 (34 kΩ) | **±2.1%** | **~27** | [Vishay NTCS0805 Datasheet](https://www.vishay.com/en/product/thermistors/ntcs0805e3/) |
 | 105NT-4-R025H46G | NTC | 3,420 kΩ | 1,000 kΩ | 82 kΩ | 3,338 kΩ | ±5% R25 (50 kΩ) | **±1.5%** | **~32** | [SEMITEC NT Series Datasheet](https://www.semitec.co.jp/english/products/thermistor/nt/) |
 | GP105V8J | NTC | 2,880 kΩ | 1,000 kΩ | 80 kΩ | 2,800 kΩ | ±10% R25 (100 kΩ) | **±3.6%** | **~31** | [Littelfuse GP Series Datasheet](https://www.littelfuse.com/products/temperature-sensors/ntc-thermistors/glass-encapsulated/gp-series.aspx) |
