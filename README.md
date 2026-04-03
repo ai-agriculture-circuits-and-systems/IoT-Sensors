@@ -60,8 +60,6 @@ This document provides a comprehensive reference for sensors, including their ke
 
 | Sensor | Application | Capacitance Range | Baseline Variable Range | Baseline Variable (%) | Sensitivity | SNDR (Sensor Only, dB) | Datasheet Link |
 |--------|-------------|-------------------|------------------------|----------------------|-------------|------------------------|----------------|
-| **MEMS Microphone Interface** | Acoustic/MEMS | -- (MEMS cap) | Integrated SAD wake-up | **<5%** | 65.4 dBA SNR @94 dB SPL | **65.4 dBA** | [IEEE ITC-CSCC, 2025](https://library.kiost.ac.kr/search/handler/output?submit=%EC%A0%80%EC%9E%A5&brief=Y&holding=Y&data=edseee_edseee-dot-11137656) |
-| **SAR ADC Capacitor Reference** | ADC Reference | **3 pF** (decoupling) | Reference error calibration | **<0.1%** | 60.4 dB SNDR @100 MS/s | **60.4 dB** | [IEEE, 2020](https://www.infona.pl/resource/bwmeta1.element.ieee-art-000007844156) |
 | **Precision Capacitive Displacement Sensor** | Displacement/Position | 10-100 pF (probe dependent) | ±0.5 pF (zero drift) | **±0.5-5%** | <0.1 nm resolution | **>60 dB** | [Baidu Baike](https://baike.baidu.com/item/%E7%94%B5%E5%AE%B9%E5%BC%8F%E4%BD%8D%E7%A7%BB%E4%BC%A0%E6%84%9F%E5%99%A8) |
 | **ΔΣ Modulator Capacitive Interface** | IR Imaging | 0.1-5 pF (pixel-level) | ±0.01 pF (dark current comp) | **±0.2-1%** | 16-bit ENOB | **96.6 dB** | [MDPI Sensors, 2017](https://www.mdpi.com/1424-8220/17/6/1273) |
 | **CMOS SC Capacitive Interface** | Humidity Sensing | 1-20 pF (configurable) | ±0.2 pF (CDS cancellation) | **±1-5%** | 10-bit SAR ADC | **50.1 dB** (Mode 1) | [EPFL, 2016](https://graphsearch.epfl.ch/en/publication/205320) |
@@ -70,6 +68,7 @@ This document provides a comprehensive reference for sensors, including their ke
 | **ROTRONIC HygroMer WA-1** | Humidity | **220 pF ±50 pF** (270 pF span) | ±50 pF (initial tolerance) | **±18.5%** | 5th order polynomial | **~30-40** | [ROTRONIC](https://service.rotronic.com/products-manual/wa-1.html) |
 | **Michell H8000** | Humidity | **250 pF ±15%** (287.5 pF span) | ±37.5 pF (initial tolerance) | **±13%** | **0.45 pF / %RH** | **~35-45** | [Michell](https://www.michell.com/us/products/h8000.htm) |
 | **General Capacitive Pressure Sensor** | Pressure | **50-100 pF** (50 pF span) | ±5 pF (zero drift) | **±10%** | few pF variation | **~30-40** | [Avnet](https://my.avnet.com/abacus/solutions/technologies/sensors/pressure-sensors/core-technologies/capacitive/) |
+| **HTS2230** | Humidity | **180-220 pF** (55% RH) | ±50 pF (initial tolerance) | **±22-28%** | **0.13 pF / %RH** | **~25-35** | [ISweek](https://www.isweek.cn/226.html) |
 | **NXP PCF8883** | Proximity/Touch | **10-60 pF** (50 pF span) | ±5 pF (parasitic capacitance) | **±10%** | Adjustable sensitivity | **~40-50** | [DigiKey](https://www.digikey.cn/zh/product-highlight/n/nxp-semi/pcf8883-capacitive-proximity-switch) |
 | **Azoteq IQS680** | Proximity/Touch | **2-200 pF** (198 pF span) | ±10 pF (parasitic capacitance) | **±5%** | 10-bit ATI | **~50-55** | [Sekorm](https://en.sekorm.com/doc/3182954.html) |
 | **TI FDC1004** | Capacitive Sensing | **±15 pF** (30 pF span) | ±100 pF (offset compensation) | **±333%** | **0.5 fF resolution** | **~45-55** | [Texas Instruments](https://www.ti.com.cn/document-viewer/cn/lit/html/ZHCSCQ6C) |
